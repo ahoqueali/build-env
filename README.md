@@ -7,6 +7,33 @@ It can be used as a test service when experimenting with version routing.
 This service is also used to demonstrate canary deployments working in conjunction with autoscaling.
 See [Canary deployments using Istio](https://istio.io/blog/2017/0.1-canary).
 
+## Create minikube cluster and setup Istio service mesh
+
+install and start docker go docker site and download
+
+install minikube ``` brew install minikube ```
+
+install istioctl ``` brew install istioctl ```
+
+create kubernetes cluster
+```bash
+minikube start --memory=7851 --cpus=4 --kubernetes-version=v1.23.3 \
+    --extra-config=controller-manager.cluster-signing-cert-file="/var/lib/minikube/certs/ca.crt" \
+    --extra-config=controller-manager.cluster-signing-key-file="/var/lib/minikube/certs/ca.key"
+```
+
+install istio demo profile
+
+```bash
+istioctl install --set profile=demo -y
+```
+
+```bash
+
+kubectl label namespace default istio-injection=enabled
+
+```
+
 ## Start the helloworld service
 
 The following commands assume you have
