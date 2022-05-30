@@ -11,7 +11,9 @@ See [Canary deployments using Istio](https://istio.io/blog/2017/0.1-canary).
 
 install and start docker go docker site and download
 
-install minikube ``` brew install minikube ```
+install Minikube ``` brew install minikube ```
+
+install Istio
 
 install istioctl ``` brew install istioctl ```
 
@@ -85,6 +87,20 @@ Apply the helloworld gateway configuration:
 ```bash
 kubectl apply -f helloworld-gateway.yaml
 ```
+
+Open tunnel to kubernetes cluster. In a new terminal run.
+
+```bash
+minikube tunnel
+```
+
+Get external IP
+
+```bash
+kubectl get svc istio-ingressgateway -n istio-system
+
+```
+
 
 Follow [these instructions](https://istio.io/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports)
 to set the INGRESS_HOST and INGRESS_PORT variables and then confirm the sample is running using curl:
