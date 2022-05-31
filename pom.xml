@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.ahoque</groupId>
-	<artifactId>hello-world</artifactId>
+	<artifactId>orchestrator-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hello-world</name>
 	<description>Demo project for Spring Boot</description>
