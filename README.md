@@ -11,37 +11,19 @@ See [Canary deployments using Istio](https://istio.io/blog/2017/0.1-canary).
 
 install and start docker go docker site and download
 
-install Minikube ``` brew install minikube ```
+install Minikube 
+```bash 
+brew install minikube 
+```
 
-install Istio ``` brew install istioctl ```
+install Istio 
+```bash 
+brew install istioctl 
+```
 
 create kubernetes cluster
 ```bash
-minikube start --memory=7851 --cpus=4 --kubernetes-version=v1.23.3 \
-    --extra-config=controller-manager.cluster-signing-cert-file="/var/lib/minikube/certs/ca.crt" \
-    --extra-config=controller-manager.cluster-signing-key-file="/var/lib/minikube/certs/ca.key"
-```
-
-```bash
-
-😄  minikube v1.25.2 on Darwin 12.4 (arm64)
-✨  Using the docker driver based on user configuration
-👍  Starting control plane node minikube in cluster minikube
-🚜  Pulling base image ...
-🔥  Creating docker container (CPUs=4, Memory=7851MB) ...
-🐳  Preparing Kubernetes v1.23.3 on Docker 20.10.12 ...
-    ▪ controller-manager.cluster-signing-cert-file=/var/lib/minikube/certs/ca.crt
-    ▪ controller-manager.cluster-signing-key-file=/var/lib/minikube/certs/ca.key
-    ▪ kubelet.housekeeping-interval=5m
-    ▪ Generating certificates and keys ...
-    ▪ Booting up control plane ...
-    ▪ Configuring RBAC rules ...
-🔎  Verifying Kubernetes components...
-    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
-🌟  Enabled addons: storage-provisioner, default-storageclass
-🏄  Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
-
-
+minikube start
 ```
 
 install istio demo profile
@@ -49,6 +31,8 @@ install istio demo profile
 ```bash
 istioctl install --set profile=demo -y
 ```
+
+enable auto istio envoy injection
 
 ```bash
 
