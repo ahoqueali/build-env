@@ -16,6 +16,15 @@ install Minikube
 brew install minikube 
 ```
 
+set container registry
+```bash
+
+minikube docker-env
+
+eval $(minikube -p minikube docker-env)
+
+```
+
 install Istio 
 ```bash 
 brew install istioctl 

@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: orchestrator
-        image: ahoqueorg/orchestrator-service
+        image: ahoqueorg/orchestrator-service:0.1
         resources:
           requests:
             cpu: "100m"

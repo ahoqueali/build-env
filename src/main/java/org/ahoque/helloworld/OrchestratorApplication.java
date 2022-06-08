@@ -13,7 +13,7 @@ public class OrchestratorApplication {
 		SpringApplication.run(OrchestratorApplication.class, args);
 	}
 
-	@GetMapping("/")
+	@GetMapping("/hello")
 	public String home() {
 		return "Hello Docker World";
 	}
