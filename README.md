@@ -177,3 +177,12 @@ kubectl delete -f helloworld.yaml
 kubectl delete -f helloworld-gateway.yaml
 kubectl delete hpa helloworld-v1 helloworld-v2
 ```
+
+```bash
+kubectl get all
+kubectl get pods -A
+kubectl expose deployment orchestrator-v1 --type NodePort --port=8080
+minikube service orchestrator-v1 --url
+istioctl x describe pod orchestrator-v1-566c5875fc-2d7jm
+kubectl delete -f samples/bookinfo/platform/kube/bookinfo.yaml
+```
