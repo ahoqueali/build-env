@@ -1,6 +1,5 @@
 1. Install docker 
 2. Enable kubernetes vi docker desktop preferences 
-3. Install kubectl ``brew install kubectl``
 4. Download and install istio
    1. ``curl -L https://istio.io/downloadIstio | sh -``
    2. ``cd istio-1.15.2``
@@ -17,3 +16,4 @@
 
 
 
+See kubectl (cheetsheet)[https://kubernetes.io/docs/reference/kubectl/cheatsheet/] for more commands.. 
