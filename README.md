@@ -16,4 +16,4 @@
 
 
 
-See kubectl (cheetsheet)[https://kubernetes.io/docs/reference/kubectl/cheatsheet/] for more commands.. 
+See kubectl [cheetsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) for more commands.. 
